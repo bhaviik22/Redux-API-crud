@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link }  from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { searchData } from '../features/userDetailSlice'
+import { searchData } from '../app/userDetailSlice'
 
 const Navbar = () => {
 

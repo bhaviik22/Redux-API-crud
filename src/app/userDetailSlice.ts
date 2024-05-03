@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import UserType  from '../model/UserDetail';
 
 export const createUser = createAsyncThunk("createUser", async (data : any,{rejectWithValue}) => {
     const response = await fetch("https://6632249cc51e14d695637eb9.mockapi.io/crud",{
@@ -61,15 +62,8 @@ export const updateUser = createAsyncThunk("updateUser", async (data : any,{reje
     }
 })
 
-interface userDetail {
-    id: number,
-    name: string,
-    email: string,
-    age: string,
-    gender: string
-}
 interface userState{
-    users: userDetail[],
+    users: UserType[],
     loading: boolean,
     error: string | null
     searchText: string
@@ -94,7 +88,7 @@ export const userDetail = createSlice({
         .addCase(createUser.pending, (state) => {
             state.loading = true;
         })
-        .addCase(createUser.fulfilled, (state, action:PayloadAction<userDetail[]>) => {
+        .addCase(createUser.fulfilled, (state, action:PayloadAction<UserType[]>) => {
             state.loading = false;
             state.users = action.payload;
         })
@@ -105,7 +99,7 @@ export const userDetail = createSlice({
         .addCase(readUser.pending, (state) => {
             state.loading = true;
         })
-        .addCase(readUser.fulfilled, (state, action:PayloadAction<userDetail[]>) => {
+        .addCase(readUser.fulfilled, (state, action:PayloadAction<UserType[]>) => {
             state.loading = false;
             state.users = action.payload;
         })

@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams,Link } from 'react-router-dom'
 import { AppDispatch } from '../app/store';
-import { updateUser } from '../features/userDetailSlice';
+import { updateUser } from '../app/userDetailSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Update = () => {
@@ -49,7 +49,7 @@ const Update = () => {
                 <label className="form-check-label" >Male</label>
             </div>
             <div className="form-check form-check-inline">
-                <input className="form-check-input" checked={updateData && updateData.gender === "Female"} onChange={handleUpdate} type="radio" name="gender" value="Female" />
+                <input className="form-check-input" checked={updateData && updateData.gender === "Female"} onChange={newData} type="radio" name="gender" value="Female" />
                 <label className="form-check-label">Female</label>
             </div>
         </div>

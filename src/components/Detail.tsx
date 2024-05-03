@@ -1,5 +1,4 @@
 import React from 'react';
-import './Detail.css';
 import { useSelector } from 'react-redux';
 
 interface  Props {

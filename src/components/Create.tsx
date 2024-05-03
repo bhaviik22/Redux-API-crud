@@ -1,15 +1,10 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux';
-import  { createUser }  from '../features/userDetailSlice';
+import  { createUser }  from '../app/userDetailSlice';
 import { AppDispatch } from '../app/store';
 import { useNavigate } from 'react-router-dom';
 
-interface  UserData {
-    name: string,
-    email: string,
-    age: string,
-    gender: string
-}
+
 export const Create = () => {
 
     const [user, setUser] = useState({

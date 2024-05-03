@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userDetail from "../features/userDetailSlice";
+import userDetail from "./userDetailSlice";
 
 export const store = configureStore({
     reducer: {

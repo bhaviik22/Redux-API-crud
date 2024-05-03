@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch } from '../app/store';
-import { deleteUser, readUser } from '../features/userDetailSlice';
+import { deleteUser, readUser } from '../app/userDetailSlice';
 import Detail from './Detail';
 import { Link } from 'react-router-dom';
 
